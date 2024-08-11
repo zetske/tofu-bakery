@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} grid lg:grid-cols-2`}>
         <div className="relative hidden lg:block">
-          <Image src="/splash.png" alt="splash" fill objectFit="cover" />
+          <Image src="/splash.png" alt="splash" priority fill objectFit="cover" />
         </div>
         {children}
       </body>
