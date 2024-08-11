@@ -18,10 +18,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} grid lg:grid-cols-2`}>
-        <div className="relative hidden lg:block">
-          <Image src="/splash.png" alt="splash" priority fill objectFit="cover" />
+        <div className="hidden lg:block fixed inset-0 w-1/2">
+          <Image
+            src="/splash.png"
+            alt="splash"
+            priority
+            fill
+            objectFit="cover"
+          />
         </div>
-        {children}
+        <div className="col-start-2 lg:overflow-y-scroll">
+          {children}
+        </div>
       </body>
     </html>
   );
