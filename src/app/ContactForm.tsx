@@ -1,5 +1,7 @@
 "use client";
 
+import { playfair_display } from "./fonts";
+
 interface Props {
   //   onSubmit: (event: any) => void;
 }
@@ -32,7 +34,7 @@ export default function ContactForm() {
   }
 
   return (
-    <>
+    <div className="min-h-screen py-10">
       <form
         onSubmit={handleSubmit}
         style={{
@@ -40,6 +42,7 @@ export default function ContactForm() {
         }}
         className="text-black bg-[rgba(255,255,255,0.25)] rounded-lg p-8 shadow-sm grid w-full gap-6"
       >
+        <h3 className={`text-2xl ${playfair_display.className}`}>Chat to us.</h3>
         <input
           type="text"
           name="name"
@@ -87,6 +90,6 @@ export default function ContactForm() {
           Submit
         </button>
       </form>
-    </>
+    </div>
   );
 }
