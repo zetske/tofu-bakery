@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} grid lg:grid-cols-2`}>
+        <div className="relative hidden lg:block">
+          <Image src="/splash.png" alt="splash" fill objectFit="cover" />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
