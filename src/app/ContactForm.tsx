@@ -9,7 +9,9 @@ export default function ContactForm() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "API_KEY");
+    const key = process.env.NEXT_PUBLIC_WEB3FORMS_API_KEY as string;
+
+    formData.append("access_key", key);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
