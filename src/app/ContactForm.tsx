@@ -34,7 +34,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="">
+    <div className="pb-10">
       <form
         onSubmit={handleSubmit}
         style={{
