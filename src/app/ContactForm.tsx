@@ -34,7 +34,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="min-h-screen py-10">
+    <div className="">
       <form
         onSubmit={handleSubmit}
         style={{
